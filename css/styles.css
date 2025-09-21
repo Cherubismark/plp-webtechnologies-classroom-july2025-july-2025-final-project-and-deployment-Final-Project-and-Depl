@@ -1,0 +1,83 @@
+/* Reset & basic styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+/* Header & nav */
+header { background: #333; color: #fff; padding: 10px 0; }
+nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 20px; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links li a { color: #fff; text-decoration: none; }
+.hamburger { display: none; cursor: pointer; }
+
+/* Main */
+main { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
+.posts article { border-bottom: 1px solid #ccc; padding: 10px 0; }
+
+/* Footer */
+footer { text-align: center; padding: 20px 0; background: #f4f4f4; margin-top: 20px; }
+
+.nav-links li a:hover {
+  color: #f4c20d; /* Example highlight color */
+}
+
+.open {
+  display: flex !important;
+  flex-direction: column;
+}
+
+
+.posts article {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.posts article:hover {
+  transform: scale(1.02);
+}
+
+footer p {
+  color: #555;
+  font-size: 14px;
+}
+
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact button {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact button:hover {
+  background: #f4c20d;
+  color: #000;
+}
+
+
+
+/* Responsive */
+@media(max-width:768px){
+  .nav-links { display: none; flex-direction: column; background:#333; position:absolute; top:50px; right:0; width:200px; }
+  .nav-links li { margin:10px 0; }
+  .hamburger { display: block; }
+}
